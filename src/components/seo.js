@@ -41,6 +41,10 @@ function Seo({ description, lang, meta, title }) {
           content: metaDescription,
         },
         {
+            name: "keywords",
+            content: "Full-Stack, web developer, React, skills, Node, MERN"
+        },
+        {
           property: `og:title`,
           content: title,
         },

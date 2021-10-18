@@ -4,26 +4,39 @@ import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import TopSection from "../components/sections/TopSection"
+import ProjectsSection from "../components/sections/ProjectsSection"
+import { ThemeProvider, createTheme } from "@mui/material"
+
+const theme = createTheme({
+    typography: {
+        fontFamily: ['"Source Sans Pro"', '"sans-serif"'].join(','),
+        
+    },
+    
+    palette: { mode: 'dark'},
+    components: {
+        MuiButton: {
+            styleOverrides: {
+                root: {
+                    letterSpacing: "0.05em",
+                    fontWeight: '500',
+                    fontSize: '15px'
+                }
+            }
+        }
+    }
+    
+});
 
 const IndexPage = () => (
-  <Layout>
-    <Seo title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <StaticImage
-      src="../images/gatsby-astronaut.png"
-      width={300}
-      quality={95}
-      formats={["auto", "webp", "avif"]}
-      alt="A Gatsby astronaut"
-      style={{ marginBottom: `1.45rem` }}
-    />
-    <p>
-      <Link to="/page-2/">Go to page 2</Link> <br />
-      <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-    </p>
-  </Layout>
+    <ThemeProvider theme={theme}>
+        <Layout>
+            <Seo title="Home" />
+            <TopSection/>
+            <ProjectsSection/>
+        </Layout>
+    </ThemeProvider>
 )
 
 export default IndexPage

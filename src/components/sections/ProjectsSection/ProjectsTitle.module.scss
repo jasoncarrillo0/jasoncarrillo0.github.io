@@ -1,0 +1,43 @@
+@import '../../sass-vars.scss';
+
+
+.topLevelWrap {
+    height: 9rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $body-background;
+
+
+    .wrap {
+        height: 100%;
+        border-bottom: 1px solid $lines-color;
+        border-top: 1px solid $lines-color;
+        position: absolute;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+    
+        h2 {
+            margin: 2rem 0;
+        }
+        &::before, &::after {
+            background: $lines-color;
+            content: "";
+            height: 1px;
+            position: absolute;
+            width: 100%;
+        }
+    
+        &::before {
+            top: 10px
+        }
+    
+        &::after {
+            bottom: 10px;
+        }
+    }
+}

@@ -1,0 +1,17 @@
+@import '../sass-vars.scss';
+
+.wrap {
+    position: relative;
+    padding: 4em 0 4em 0;
+
+    &::before {
+        content: "";
+        background: $lines-color;
+        height: 100%;
+        position: absolute;
+        left: 50%;
+        top: 0;
+        width: 1px;
+        z-index: 0;
+    }
+}

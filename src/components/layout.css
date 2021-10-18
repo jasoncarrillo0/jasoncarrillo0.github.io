@@ -1,4 +1,23 @@
-html {
+html, body {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    border: none;
+    font-family: "Source Sans Pro";
+    background: #101010;
+}
+
+h1,h2,h3,h4 {
+    line-height: 1.75em;
+    letter-spacing: 0.125em;
+    font-weight: bold;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+/* html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   font: 112.5%/1.45em georgia, serif, sans-serif;
@@ -594,4 +613,4 @@ pre tt:after {
   html {
     font-size: 100%;
   }
-}
+} */

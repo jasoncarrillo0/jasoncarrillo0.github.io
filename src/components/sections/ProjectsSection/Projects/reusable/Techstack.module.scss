@@ -1,0 +1,17 @@
+.wrap {
+    //bottom: 1rem;
+    //position: absolute;
+    //width: calc(100% - 4rem);
+
+    h3 {
+        text-transform: uppercase;
+        font-size: 16px;
+    }
+
+    .techWrap {
+        display: flex;
+        flex-direction: row;
+        grid-gap: 1rem;
+        flex-wrap: wrap;
+    }
+}
